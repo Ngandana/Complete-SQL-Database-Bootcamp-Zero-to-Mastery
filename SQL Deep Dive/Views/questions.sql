@@ -5,7 +5,9 @@
 */
 
 CREATE VIEW "90-95" AS
--- ...
+SELECT emp_no, hire_date
+FROM employees
+where EXTRACT(YEAR from hire_date) BETWEEN 1990 AND 1995
 
 /*
 *  Create a view "bigbucks" that:
